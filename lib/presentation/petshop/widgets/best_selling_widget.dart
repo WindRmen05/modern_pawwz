@@ -1,6 +1,8 @@
 // Best Selling Section
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:modern_pawwz/core/theme/app_colors.dart';
+import 'package:modern_pawwz/presentation/components/custom_header_widget.dart';
 
 class BestSellingSection extends StatelessWidget {
   const BestSellingSection({super.key});
@@ -10,14 +12,14 @@ class BestSellingSection extends StatelessWidget {
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
-        Text(
+
+        CustomHeaderWidget(
           "Try Our BEST SELLING",
-          style: Theme.of(context).textTheme.headlineSmall,
-        ),
-        SizedBox(height: 8.sp),
-        Text(
-          "Salmon & Chickens Food",
-          style: Theme.of(context).textTheme.labelLarge,
+              subtitles: "Healthy food",
+          isSeeAll: true,
+          onTap: () {
+
+          }
         ),
         SizedBox(height: 12.sp),
         SizedBox(

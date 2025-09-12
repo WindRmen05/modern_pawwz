@@ -32,10 +32,10 @@ class RecommendationList extends StatelessWidget {
             Navigator.pushNamed(context, PetsDetailsPage.routeName);
           },
           child: Container(
-            margin: spacing(value: 2),
+            margin: spacing(value: 1),
             decoration: BoxDecoration(
               color: Colors.grey.shade100,
-              borderRadius: BorderRadius.circular(20),
+              borderRadius: BorderRadius.circular(5),
             ),
             padding: EdgeInsets.all(10.sp),
             child: Column(

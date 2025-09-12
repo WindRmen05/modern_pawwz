@@ -8,7 +8,12 @@ class Product {
   final String type;
   final double rating;
 
-  Product({required this.name, required this.price, required this.image, required this.type, required this.rating});
+  Product(
+      {required this.name,
+      required this.price,
+      required this.image,
+      required this.type,
+      required this.rating});
 }
 
 // Provider Class
@@ -17,20 +22,28 @@ class PetShopNotifier with ChangeNotifier {
     Product(
         name: "Taste Of The Wild High Prairie Canine Grain-Free Recipe",
         price: 30.20,
-        image: "assets/dog_food.png",
+        image: "assets/icons/dog.png",
         type: "Dog Food",
         rating: 4.8),
     Product(
         name: "Meow Mix Tender Centers Dry Cat Food, Salmon",
         price: 12.0,
-        image: "assets/cat_food.png",
+        image: "assets/icons/cat.png",
         type: "Cat Food",
         rating: 4.9),
     Product(
         name: "Double-Tuff Durable Treat Stuffer Dog Chew Toy",
         price: 25.99,
-        image: "assets/dog_toy.png",
+        image: "assets/icons/dog.png",
         type: "Accessories",
         rating: 4.7),
+  ];
+
+  List<String> categoryList = [
+    "All Food",
+    "Cat Food",
+    "Dog Food",
+    "Bird Food",
+    "Fish Food"
   ];
 }

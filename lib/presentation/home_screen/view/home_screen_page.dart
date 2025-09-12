@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:modern_pawwz/presentation/home_screen/provider/provider.dart';
 import 'package:modern_pawwz/presentation/home_screen/widgets/home_screen_body.dart';
+import 'package:modern_pawwz/presentation/home_screen/widgets/home_screen_body_2.dart';
 
 class HomeScreenPage extends StatelessWidget {
   static const String routeName = "HomeScreenPage";
@@ -26,6 +27,6 @@ class HomeScreenView extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const HomeScreenBody();
+    return const HomeScreen2();
   }
 }

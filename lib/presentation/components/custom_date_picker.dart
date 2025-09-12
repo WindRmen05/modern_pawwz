@@ -9,6 +9,7 @@ class CustomDatePicker extends StatefulWidget {
   final DateTime? firstDate;
   final DateTime? lastDate;
   final String? hintText;
+  final String? title;
   final String? sDate;
 
   const CustomDatePicker({
@@ -18,6 +19,7 @@ class CustomDatePicker extends StatefulWidget {
     this.firstDate,
     this.lastDate,
     this.hintText,
+    this.title,
     this.sDate,
   }) : super(key: key);
 
@@ -50,28 +52,46 @@ class _CustomDatePickerState extends State<CustomDatePicker> {
 
   @override
   Widget build(BuildContext context) {
-    return GestureDetector(
-      onTap: () => _selectDate(context),
-      child: Container(
-        height: 32.sp,
-        padding: spacingSym(),
-        decoration: BoxDecoration(
-          border: Border.all(color: Colors.grey.shade300),
-          borderRadius: BorderRadius.circular(20),
-        ),
-        child: Row(
-          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+    return Padding(
+      padding: spacingOnly(t:15.sp),
+      child: GestureDetector(
+        onTap: () => _selectDate(context),
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            Text(
-              widget.sDate ?? (selectedDate != null
-                  ? "${selectedDate!.day}-${selectedDate!.month}-${selectedDate!.year}"
-                  : widget.hintText ?? "Select Date"),
-              style: Theme.of(context).textTheme.bodySmall,
+            Padding(
+              padding: spacingOnly(l:10.sp),
+              child: Text(
+                widget.title ?? '',
+                style: Theme.of(context).textTheme.bodySmall,
+              ),
             ),
-            Icon(
-              Iconsax.calendar_1_outline,
-              size: 18.sp,
-              color: Colors.grey.shade500,
+            5.sp.sizeh,
+            Container(
+              // margin: spacingOnly(),
+              height: 60.sp,
+              padding: spacingSym(),
+              decoration: BoxDecoration(
+                border: Border.all(color: Colors.grey.shade300),
+                borderRadius: BorderRadius.circular(20),
+              ),
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [
+                  Text(
+                    widget.sDate ??
+                        (selectedDate != null
+                            ? "${selectedDate!.day}-${selectedDate!.month}-${selectedDate!.year}"
+                            : widget.hintText ?? "Select Date"),
+                    style: Theme.of(context).textTheme.bodySmall,
+                  ),
+                  Icon(
+                    Iconsax.calendar_1_outline,
+                    size: 18.sp,
+                    color: Colors.grey.shade500,
+                  ),
+                ],
+              ),
             ),
           ],
         ),

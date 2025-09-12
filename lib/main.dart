@@ -5,6 +5,7 @@ import 'package:modern_pawwz/core/navigator/app_routes.dart';
 import 'package:modern_pawwz/core/theme/app_theme.dart';
 import 'package:modern_pawwz/core/theme/theme_provider.dart';
 import 'package:modern_pawwz/presentation/main_screen/main_screen.dart';
+import 'package:modern_pawwz/presentation/splash_screen/splash_screen.dart';
 import 'package:modern_pawwz/presentation/welcome_screen/view/welcome_screen_page.dart';
 import 'package:provider/provider.dart';
 
@@ -39,7 +40,8 @@ class MyApp extends StatelessWidget {
               debugShowCheckedModeBanner: false,
               theme: value.isDark ? AppTheme.darkTheme : AppTheme.lightTheme,
               onGenerateRoute: AppRoutes.generateRoute,
-              initialRoute: WelcomeScreenPage.routeName,
+              // initialRoute: WelcomeScreenPage.routeName,
+              initialRoute: SplashScreenPage.routeName,
               builder: (context, child) {
                 return GestureDetector(
                     onTap: () {

@@ -47,91 +47,89 @@ Widget CustomTextField({
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           if (isTopPadding) 20.sp.sizeh,
-          SizedBox(
-            child: TextFormField(
-              key: key,
-              initialValue: initialValue,
-              controller: controller,
-              autofocus: false,
-              enabled: enabled,
-              obscureText: obscureText,
-              keyboardType: keyboardType,
-              maxLength: maxLength,
-              maxLines: maxLines,
-              minLines: minLines,
-              autocorrect: true,
-              validator: validator,
-              onTap: onTap,
-              onChanged: onChanged,
-              style: Theme.of(context).textTheme.bodyMedium?.copyWith(color: textColor),
-              decoration: InputDecoration(
-                prefixIcon: prefixIcon,
-                suffixIcon: suffixIcon,
-                counterText: '',
-                contentPadding: padding ?? spacing(value: 20),
-                label: showLabel
-                    ? Text(
-                  label,
-                  style: Theme.of(context).textTheme.bodyMedium?.copyWith(
-                    color: labelColor,
-                    fontWeight: FontWeight.w500,
-                  ),
-                )
-                    : null,
-                hintText: hint,
-                hintStyle: Theme.of(context).textTheme.bodySmall?.copyWith(
-                  color: hintColor,
-                  fontWeight: FontWeight.w400,
+          TextFormField(
+            key: key,
+            initialValue: initialValue,
+            controller: controller,
+            autofocus: false,
+            enabled: enabled,
+            obscureText: obscureText,
+            keyboardType: keyboardType,
+            maxLength: maxLength,
+            maxLines: maxLines,
+            minLines: minLines,
+            autocorrect: true,
+            validator: validator,
+            onTap: onTap,
+            onChanged: onChanged,
+            style: Theme.of(context).textTheme.bodyMedium?.copyWith(color: textColor),
+            decoration: InputDecoration(
+              prefixIcon: prefixIcon,
+              suffixIcon: suffixIcon,
+              counterText: '',
+              contentPadding: padding ?? spacing(value: 20),
+              label: showLabel
+                  ? Text(
+                label,
+                style: Theme.of(context).textTheme.bodyMedium?.copyWith(
+                  color: labelColor,
+                  fontWeight: FontWeight.w500,
                 ),
-                floatingLabelBehavior:
-                floatingLabelBehavior ?? FloatingLabelBehavior.always,
-                floatingLabelAlignment: FloatingLabelAlignment.start,
-                alignLabelWithHint: true,
+              )
+                  : null,
+              hintText: hint,
+              hintStyle: Theme.of(context).textTheme.bodySmall?.copyWith(
+                color: hintColor,
+                fontWeight: FontWeight.w400,
+              ),
+              floatingLabelBehavior:
+              floatingLabelBehavior ?? FloatingLabelBehavior.always,
+              floatingLabelAlignment: FloatingLabelAlignment.start,
+              alignLabelWithHint: true,
 
-                disabledBorder: OutlineInputBorder(
-                  borderSide: BorderSide(
-                    width: 1,
-                    color: theme.brightness == Brightness.light
-                        ? Colors.grey.shade500
-                        : Colors.grey.shade700,
-                  ),
-                  borderRadius:
-                  BorderRadius.all(Radius.circular(radius ?? 20)),
+              disabledBorder: OutlineInputBorder(
+                borderSide: BorderSide(
+                  width: 1,
+                  color: theme.brightness == Brightness.light
+                      ? Colors.grey.shade500
+                      : Colors.grey.shade700,
                 ),
-                enabledBorder: OutlineInputBorder(
-                  borderSide: BorderSide(
-                    width: 1,
-                    color: theme.brightness == Brightness.light
-                        ? Colors.grey.shade300
-                        : Colors.grey.shade600,
-                  ),
-                  borderRadius:
-                  BorderRadius.all(Radius.circular(radius ?? 20)),
+                borderRadius:
+                BorderRadius.all(Radius.circular(radius ?? 20)),
+              ),
+              enabledBorder: OutlineInputBorder(
+                borderSide: BorderSide(
+                  width: 1,
+                  color: theme.brightness == Brightness.light
+                      ? Colors.grey.shade300
+                      : Colors.grey.shade600,
                 ),
-                focusedBorder: OutlineInputBorder(
-                  borderSide: BorderSide(
-                    width: 2.sp,
-                    color: AppColors.lightPrimary,
-                  ),
-                  borderRadius:
-                  BorderRadius.all(Radius.circular(radius ?? 20)),
+                borderRadius:
+                BorderRadius.all(Radius.circular(radius ?? 20)),
+              ),
+              focusedBorder: OutlineInputBorder(
+                borderSide: BorderSide(
+                  width: 2.sp,
+                  color: AppColors.lightPrimary,
                 ),
-                errorBorder: OutlineInputBorder(
-                  borderSide: BorderSide(
-                    width: 1,
-                    color: Colors.red.shade400,
-                  ),
-                  borderRadius:
-                  BorderRadius.all(Radius.circular(radius ?? 20)),
+                borderRadius:
+                BorderRadius.all(Radius.circular(radius ?? 20)),
+              ),
+              errorBorder: OutlineInputBorder(
+                borderSide: BorderSide(
+                  width: 1,
+                  color: Colors.red.shade400,
                 ),
-                focusedErrorBorder: OutlineInputBorder(
-                  borderSide: BorderSide(
-                    width: 2.sp,
-                    color: Colors.red.shade400,
-                  ),
-                  borderRadius:
-                  BorderRadius.all(Radius.circular(radius ?? 20)),
+                borderRadius:
+                BorderRadius.all(Radius.circular(radius ?? 20)),
+              ),
+              focusedErrorBorder: OutlineInputBorder(
+                borderSide: BorderSide(
+                  width: 2.sp,
+                  color: Colors.red.shade400,
                 ),
+                borderRadius:
+                BorderRadius.all(Radius.circular(radius ?? 20)),
               ),
             ),
           ),

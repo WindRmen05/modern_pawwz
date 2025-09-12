@@ -33,14 +33,21 @@ class WelcomeScreenNotifier extends ChangeNotifier {
       notifyListeners();
     } else {
       // Navigate to home page or dashboard
-      Navigator.pushNamedAndRemoveUntil(context, MainScreenPage.routeName,(route) => false,);
+      Navigator.pushNamedAndRemoveUntil(
+        context,
+        MainScreenPage.routeName,
+        (route) => false,
+      );
     }
   }
 
   init() {
     Future.delayed(Duration(seconds: 2), () {
-      // Navigator.pushNamed(
-      //     navigator.currentState!.context, MainScreenPage.routeName);
+      Navigator.pushNamedAndRemoveUntil(
+        navigator.currentState!.context,
+        MainScreenPage.routeName,
+        (route) => false,
+      );
     });
   }
 }

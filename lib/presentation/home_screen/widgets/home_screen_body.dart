@@ -49,7 +49,7 @@ class HomeScreenBody extends StatelessWidget {
 
                   // Recommendation Grid
                   Padding(
-                    padding: spacingSym(v: 0),
+                    padding: spacingSym(v: 0,h:5),
                     child: RecommendationList(),
                   ),
                 ],
