@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:modern_pawwz/presentation/home_screen/provider/provider.dart';
-import 'package:modern_pawwz/presentation/home_screen/widgets/home_screen_body.dart';
 import 'package:modern_pawwz/presentation/home_screen/widgets/home_screen_body_2.dart';
 
 class HomeScreenPage extends StatelessWidget {

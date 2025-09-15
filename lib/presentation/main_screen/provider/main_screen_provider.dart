@@ -6,7 +6,7 @@ class MainScreenNotifier with ChangeNotifier {
   final List<String> icons = [
     'assets/icons/home',
     // 'assets/icons/shop',
-    'assets/icons/add',
+    // 'assets/icons/add',
     'assets/icons/person',
     'assets/icons/more',
   ];
@@ -14,7 +14,7 @@ class MainScreenNotifier with ChangeNotifier {
   final List<String> labels = [
     'Home',
     // 'Shop',
-    'Add',
+    // 'Add',
     'Profile',
     'More',
   ];

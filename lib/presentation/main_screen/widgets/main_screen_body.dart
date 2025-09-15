@@ -22,7 +22,7 @@ class MainScreenBody extends StatelessWidget {
               children: [
                 HomeScreenPage(),
                 // PetshopPage(),
-                AddPostPage(),
+                // AddPostPage(),
                 ProfilePage(),
               ],
             ),

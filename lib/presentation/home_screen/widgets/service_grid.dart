@@ -2,8 +2,11 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:modern_pawwz/presentation/ai_chat_bot/view/ai_chat_bot_page.dart';
 import 'package:modern_pawwz/presentation/doctor_listing/view/doctor_listing_page.dart';
+import 'package:modern_pawwz/presentation/home_screen/widgets/home_screen_body.dart';
+import 'package:modern_pawwz/presentation/pet_adoption/view/pet_adoption_page.dart';
 import 'package:modern_pawwz/presentation/pet_event/view/pet_event_page.dart';
 import 'package:modern_pawwz/presentation/petshop/view/petshop_page.dart';
+import 'package:modern_pawwz/presentation/vaccination_timeline/view/vaccination_timeline_page.dart';
 
 class ServicesGrid extends StatelessWidget {
   final List<Map<String, dynamic>> services;
@@ -30,6 +33,9 @@ class ServicesGrid extends StatelessWidget {
           ),
           child: InkWell(
             onTap: () {
+              if (index == 0) {
+                Navigator.pushNamed(context, VaccinationTimelinePage.routeName);
+              }
               if (index == 2) {
                 Navigator.pushNamed(context, PetshopPage.routeName);
               }
@@ -41,6 +47,9 @@ class ServicesGrid extends StatelessWidget {
               }
               if (index == 5) {
                 Navigator.pushNamed(context, AiChatBotPage.routeName);
+              }
+              if (index == 4) {
+                Navigator.pushNamed(context, PetAdoptionPage.routeName);
               }
             },
             borderRadius: BorderRadius.circular(16.r),
@@ -63,7 +72,7 @@ class ServicesGrid extends StatelessWidget {
                 Positioned(
                   top: 30,
                   bottom: 0,
-                  right:0,
+                  right: 0,
                   left: 20,
                   child: Image.asset(
                     service['icon'],

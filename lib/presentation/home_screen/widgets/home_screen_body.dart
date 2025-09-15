@@ -9,6 +9,7 @@ import 'package:modern_pawwz/presentation/home_screen/widgets/reccommendation_li
 import 'package:sizable/sizable.dart';
 
 class HomeScreenBody extends StatelessWidget {
+  static const String routeName = "HomeScreenBody";
   const HomeScreenBody({super.key});
 
   @override

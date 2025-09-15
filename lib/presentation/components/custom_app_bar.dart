@@ -2,28 +2,26 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:modern_pawwz/core/theme/app_colors.dart';
 import 'package:modern_pawwz/main.dart';
+import 'package:modern_pawwz/presentation/notification_screen/view/notification_screen_page.dart';
 import 'package:sizable/sizable.dart';
 
-CustomAppBar({String? profileImage,String? location}) {
+CustomAppBar({String? profileImage, String? location}) {
   return AppBar(
     leadingWidth: 80.sp,
     // toolbarHeight: 80.sp,
     // automaticallyImplyLeading: false,
     elevation: 0,
-    backgroundColor: Theme
-        .of(navigator.currentState!.context)
-        .scaffoldBackgroundColor,
+    backgroundColor:
+        Theme.of(navigator.currentState!.context).scaffoldBackgroundColor,
     leading: Padding(
-      padding: spacingOnly(l:10.sp),
+      padding: spacingOnly(l: 10.sp),
       child: CircleAvatar(
         radius: 18.sp,
         backgroundImage: AssetImage(profileImage ?? ''),
       ),
     ),
     title: InkWell(
-      onTap: () {
-
-      },
+      onTap: () {},
       child: SizedBox(
         // height: 20.sp,
         child: Column(
@@ -31,19 +29,29 @@ CustomAppBar({String? profileImage,String? location}) {
           children: [
             Text(
               "Location",
-              style: Theme.of(navigator.currentState!.context).textTheme.bodySmall?.copyWith(
-                color: Theme.of(navigator.currentState!.context).textTheme.bodySmall?.color?.withOpacity(0.7),
-                fontSize: 10.sp,
-              ),
+              style: Theme.of(navigator.currentState!.context)
+                  .textTheme
+                  .bodySmall
+                  ?.copyWith(
+                    color: Theme.of(navigator.currentState!.context)
+                        .textTheme
+                        .bodySmall
+                        ?.color
+                        ?.withOpacity(0.7),
+                    fontSize: 10.sp,
+                  ),
             ),
             Row(
               children: [
                 Text(
-                  location ??'',
-                  style: Theme.of(navigator.currentState!.context).textTheme.bodyLarge?.copyWith(
-                    fontWeight: FontWeight.bold,
-                    fontSize: 12.sp,
-                  ),
+                  location ?? '',
+                  style: Theme.of(navigator.currentState!.context)
+                      .textTheme
+                      .bodyLarge
+                      ?.copyWith(
+                        fontWeight: FontWeight.bold,
+                        fontSize: 12.sp,
+                      ),
                 ),
                 const Icon(Icons.keyboard_arrow_down, size: 18),
               ],
@@ -54,13 +62,14 @@ CustomAppBar({String? profileImage,String? location}) {
     ),
     actions: [
       IconButton(
-        style: ButtonStyle(backgroundColor: WidgetStatePropertyAll(AppColors.darkAccent)),
-        onPressed: (){},
+        style: ButtonStyle(
+            backgroundColor: WidgetStatePropertyAll(AppColors.darkAccent)),
+        onPressed: () {
+          Navigator.pushNamed(navigator.currentState!.context,
+              NotificationScreenPage.routeName);
+        },
         icon: const Icon(Icons.notifications_none),
-        color: Theme
-            .of(navigator.currentState!.context)
-            .iconTheme
-            .color,
+        color: Theme.of(navigator.currentState!.context).iconTheme.color,
       ),
       30.sp.sizew,
     ],
