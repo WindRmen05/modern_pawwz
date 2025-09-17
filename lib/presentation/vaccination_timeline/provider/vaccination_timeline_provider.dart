@@ -15,8 +15,8 @@ class Vaccination {
   });
 }
 
-/// Provider for managing vaccination data and selected date
 class VaccinationTimelineNotifier with ChangeNotifier {
+
   DateTime _selectedDate = DateTime.now();
   DateTime get selectedDate => _selectedDate;
 
@@ -53,4 +53,5 @@ class VaccinationTimelineNotifier with ChangeNotifier {
     _selectedDate = date;
     notifyListeners();
   }
+
 }

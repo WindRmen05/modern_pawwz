@@ -7,10 +7,12 @@ import 'package:modern_pawwz/presentation/main_screen/main_screen.dart';
 import 'package:modern_pawwz/presentation/notification_screen/view/notification_screen_page.dart';
 import 'package:modern_pawwz/presentation/pet_adoption/view/pet_adoption_page.dart';
 import 'package:modern_pawwz/presentation/pet_event/view/pet_event_page.dart';
+import 'package:modern_pawwz/presentation/pet_profile/view/pet_profile_page.dart';
 import 'package:modern_pawwz/presentation/pets_details/pets_details.dart';
 import 'package:modern_pawwz/presentation/pets_details/pets_details.dart';
 import 'package:modern_pawwz/presentation/petshop/view/petshop_page.dart';
 import 'package:modern_pawwz/presentation/product_details/view/product_details_page.dart';
+import 'package:modern_pawwz/presentation/sign_up/view/sign_up_page.dart';
 import 'package:modern_pawwz/presentation/splash_screen/view/splash_screen_page.dart';
 import 'package:modern_pawwz/presentation/vaccination_timeline/view/vaccination_timeline_page.dart';
 import 'package:modern_pawwz/presentation/welcome_screen/view/welcome_screen_page.dart';
@@ -69,6 +71,14 @@ class AppRoutes {
       case VaccinationTimelinePage.routeName:
         {
           return _slideRoute(VaccinationTimelinePage(), routeSettings);
+        }
+      case SignUpPage.routeName:
+        {
+          return _slideRoute(SignUpPage(), routeSettings);
+        }
+      case PetProfilePage.routeName:
+        {
+          return _slideRoute(PetProfilePage(), routeSettings);
         }
       default:
         return _slideRoute(WelcomeScreenPage(), routeSettings);
